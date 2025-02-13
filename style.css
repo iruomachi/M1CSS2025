@@ -2,3 +2,16 @@ body {
     margin: auto;
     color: #FFF;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: radial-gradient(circle,
+    #217c89, #165e69, #0d434b, #06262b)
+    padding: 5px 50px
+}
+
+.couleur{
+    color: #217c89
+}
