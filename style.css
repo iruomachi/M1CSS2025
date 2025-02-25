@@ -8,10 +8,35 @@ header {
     justify-content: space-between;
     align-items: center;
     background: radial-gradient(circle,
-    #217c89, #165e69, #0d434b, #06262b)
+    #217c89, #165e69, #0d434b, #06262b);
     padding: 5px 50px
 }
 
 .couleur{
     color: #217c89
+}
+
+header h1 {
+    font-size: 70px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width : 50%;
+    gap: 10px;
+}
+
+header nav a{
+    text-decoration: none;
+    color :#FFF;
+    background-color: #217c89;
+    border: #FFF solid 1px;
+    border-radius: 10px;
+    width: 20%;
+    text-align: center;
+    padding : 15px 0px;
+    box-shadow: 4px 4px rgba(170, 207, 212, 0.6);
+    cursor: pointer;
 }
