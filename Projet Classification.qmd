@@ -1,0 +1,94 @@
+---
+title: "Projet Classification"
+format: html
+editor: visual
+---
+
+## Librairie utilisée
+
+```{r}
+library(readr)
+library(rsample)
+library(dplyr)
+library(rpart)
+library(discrim)
+library(kknn)
+```
+
+## Installation de la base de donnée
+
+```{r}
+set.seed(1)
+df <- read.csv("synthetic_insurance_data.csv",
+              header = TRUE,
+              sep = ",")
+```
+
+## Changement des noms de variables
+
+```{r}
+df1 <- df |> 
+  rename (Senior = Is_Senior,
+          Statut_Marital = Marital_Status,
+          Réduction_prime_personnes_marié = Married_Premium_Discount,
+          Assurance_prec = Prior_Insurance,
+          Ajustement_prime_assurance_prec = Prior_Insurance_Premium_Adjustment,
+          Fréquence_des_Sinistres = Claims_Frequency,
+          Gravité_des_Sinistres = Claims_Severity,
+          Ajustement_Des_Sinistres = Claims_Adjustment,
+          Police_Assurance = Policy_Type,
+          Ajustement_police_assurance = Policy_Adjustment,
+          Montant_prime = Premium_Amount,
+          Reduction_conducteur_prudent = Safe_Driver_Discount,
+          Réduction_multi_police = Multi_Policy_Discount,
+          Réduction_pour_plusieurs_contrats = Bundling_Discount,
+          Total_réduction = Total_Discounts,
+          Source_du_client = Source_of_Lead,
+          Temps_écoulé_du_premier_contrat = Time_Since_First_Contact,
+          Statut_de_conversion = Conversion_Status,
+          Visite_Web_du_Client = Website_Visits,
+          Demandes_information = Inquiries,
+          Devis_demandés = Quotes_Requested,
+          Temps_avant_de_devenir_client = Time_to_Conversion,
+          Solvabilité_client = Credit_Score,
+          Ajustement_basé_sur_solvabilité = Premium_Adjustment_Credit,
+          Ajustement_prime_Region = Premium_Adjustment_Region
+  )
+```
+
+## Découpage de notre base
+
+```{r}
+
+df1_split <- df1 |> initial_split(prop = 2/3)
+test_df1 <- df1_split |> testing()
+train_df1 <- df1_split |> training()
+```
+
+## Modele correspondant
+
+```{r}
+lda_mod <- discrim_linear() |> 
+  set_mode("classification") |> 
+  set_engine("MASS")
+qda_mod <- discrim_quad() |> 
+  set_mode("classification") |> 
+  set_engine("MASS")
+knn_mod <- nearest_neighbor() |> 
+  set_mode("classification") |> 
+  set_engine("kknn")
+svm_linear_mod <- svm_linear() |> 
+  set_mode("classification") |> 
+  set_engine("kernlab")
+svm_rad_mod <- svm_rbf() |> 
+  set_mode("classification") |> 
+set_engine("kernlab")
+```
+
+
+
+
+
+
+
+
