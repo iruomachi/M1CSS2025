@@ -1,0 +1,428 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background: url(Images/home1.jpg) no-repeat fixed;
+    background-size: cover;
+    color: white;
+    margin: 0, auto;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background: radial-gradient(circle, #217c89, #165e69, #0d434b, #06262b);
+    padding: 5px 50px;
+    }
+    .couleur {
+    color: #217c89;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end; 
+        padding: 15px; 
+    }
+    
+    nav ul {
+        list-style: none; 
+        display: flex; 
+        gap: 20px; 
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: white; 
+        font-size: 15px;
+        padding: 10px 15px; 
+        transition: background 0.3s;
+    }
+    
+    #hero {
+        position: relative;
+        text-align: center;
+        padding: 100px 20px;
+        color: white;
+        font-family: 'Roboto Slab', serif; 
+    }
+    
+    #hero h1 {
+        font-family: 'Roboto Slab';
+        font-size: 60px;
+        font-weight: normal;
+        text-transform: uppercase;
+        
+    }
+    
+    #hero p {
+        font-size: 20px;
+    }
+    
+    #hero::after {
+        content: "H";
+        font-size: 300px;
+        color: rgba(255, 255, 255, 0.1); 
+        position: absolute;
+        top: 50%;
+        left: 30%; 
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    .wrapped-text {
+        max-width: 60ch; 
+        word-wrap: break-word;
+        line-height: 1.4; 
+    }
+
+    body {
+        background-image: url('images/home1.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    
+    body.about-page {
+        background-image: none;
+        background-color:#ffffff ;
+    }
+    
+    #about{justify-content: center;
+        height: 100vh;
+        position: relative;
+    }
+
+    #About img {
+        transition: 0.5s;
+    }
+    
+    #About img:hover {
+        transform: scale(1.3);
+    }
+
+    #About span{
+        display: block;
+        position: absolute;
+        width: 35%;
+        top: 30%;
+        right: 10%;
+        color: #333;
+    }
+
+    #About span h1{
+        font-weight: 500;
+        font-size: 30px;
+        margin-bottom: 35px;
+        text-transform: bold;
+    }
+
+    #About span h2{
+        font-weight: 400;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    #About span p{
+        text-align: justify;
+        font-weight: 150;
+        font-size: 15px;
+}
+
+    .image_a1{
+        position: absolute;
+        width: 270px;
+        height: 410px;
+        border-radius: 30px;
+        margin-left: 10%;
+        margin-top: 11.5%;
+        border: #c1b086 3px solid;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
+    }
+
+    .image_a2{
+        position: absolute;
+        width: 280px;
+        height: 175px;
+        border-radius: 30px;
+        border: #c1b086 3px solid;
+        margin-left: 18%;
+        margin-top: 29%;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
+    }
+
+    body.amenities_page {
+        background-image: none;
+        background-color:#ffffff;
+    }
+    
+    #amenities{
+        height: 100vh;
+        position: relative;
+    }
+
+    .image_ami{
+        background-size: cover;
+        background-position: top;
+        width: 100%;
+        height: 50%;
+        border: #c1b086 3px solid;
+    }
+
+    #amenities .Box{
+        position: absolute;
+        padding: 3%;
+        width: 40%;
+        height: 40%;
+        color:white;
+        background-color: #3f9cc1 ;
+        border-radius: 25px;
+        border: #c1b086 3px solid;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
+        right: 12%;
+        bottom: 9%;
+        transition: 0.5s;
+        opacity: 0.5;
+    }
+
+    #amenities .Box:hover {
+        opacity: 1;
+    }
+
+    #amenities .Box span h1 {
+        font-size: 18px;
+        font-weight: 500;
+        }
+
+    #amenities .Box span p {
+        margin-top: 20px;
+        text-align: justify;
+        line-height: 2;
+        font-size: 11px;
+    }
+
+    #amenities .symbole {
+        display: flex;
+        font-size: 13px;
+        margin-top: 40px;
+        gap: 13%;
+        line-height: 3;
+    }
+                
+    #amenities ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+    }
+                
+    #amenities ul li i {
+                margin-right: 20px;
+    }
+
+    body.room_page {
+        background-image: none;
+        background-color:#ffffff;
+    }
+    
+    #Room{
+        height: 100vh;
+        position: relative;
+    }
+
+    #Room .Room_Titles span {
+        display: inline-block;
+        margin: 4% 0 0 10%;
+        }
+
+    #Room .Room_Titles span h1 {
+        font-size: 10px;
+        letter-spacing: 2px;
+        color: grey;
+        text-transform: uppercase;
+    }
+
+    #Room .Room_Titles span h2 {
+        font-weight: 450;
+        font-size: 26px;
+        margin: 23px 0;
+        color: #333;
+        padding-bottom: 10px;
+    }
+
+    .room {
+        display: flex;
+        width: 85%;
+        margin: 0 0 0 10%;
+        gap: 30px;
+    }
+    
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 500px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        border:#c1b086 3px solid;
+    }
+
+    .box .detail{
+        margin-top: auto;
+        background-color: white;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .box .detail span {
+        display: inline-block;
+        margin-left: 13px;
+    }
+    
+    .box .detail h1 {
+        color: black;
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: -10px;
+        margin-top: 15px;
+    }
+
+    .box .detail span p{
+        color : black
+
+    }
+
+    #Room .box p::before{
+        content : "$";
+        font-size : 11px;
+        color : gray
+}   
+
+#Room .box p::after{
+    content : "/per night";
+    font-size : 11px;
+    color : gray
+}
+
+body.restaurant_page {
+    background-image: none;
+    background-color:#ffffff;
+}
+
+    #restaurant{
+        height: 100vh;
+        position: relative;
+}
+
+    #restaurant .r_title span {
+        display: inline-block;
+        margin-left: 37.5%;
+        margin-top: 30px;
+    }
+    
+    #restaurant span h1{
+        font-weight: 430;
+        color: black;
+    }
+    
+    #restaurant span h1::before{
+        position: absolute;
+        content: "";
+        width: 5.5%;
+        top: 30px;
+        border: #c1b086 1.5px solid;
+    
+    }
+    
+    #restaurant .r_title span p {    
+        font-size: 13px;
+        color: #666;
+        margin-left: 40px;
+        margin-top: 40px;
+        width: 56%;
+    }
+    
+    #restaurant .re img {
+        position: absolute;
+        background-position: center;
+        margin-left: 10%;
+        margin-top: -9%;
+        width: 370px;
+        height: 620px;
+        border-radius: 20px;
+        border: #c1b086 3px solid;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
+        object-fit: cover;
+    }
+    
+    #restaurant .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 50%;
+        margin-left: 37.5%;
+        margin-top: 15px;
+    }
+    
+    #restaurant .r_grid {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        border-radius: 25px;
+        width: 100%;
+        height: 220px;
+        border: #c1b086 3px solid;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
+        overflow: hidden;
+    }
+    
+    #restaurant .overlay_title {
+        display: flex;
+        justify-content: center;
+        color: white;
+        transform: translateY(150px);
+        background-color:rgb(193, 176, 134);
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        height: 20%;
+        font-size: 19px;
+        font-weight: 300;
+        opacity: 0;
+        transition: 0.7s ease;
+    }
+    
+    #restaurant .overlay_detail {
+        display: flex;
+        justify-content: center;
+        color: white;
+        transform: translateY(-140px);
+        margin: 0 0 0 5%;
+        margin-left: 24px;
+        padding-left: 3%;
+        padding-right: 3%;
+        background-color:rgb(193, 176, 134);
+        width: 80%;
+        text-align: justify;
+        font-size: 13px;
+        border-radius: 15px;
+        opacity: 0;
+        transition: 0.7s ease;
+    }
+    
+    #restaurant .r_grid:hover .overlay_title {
+        opacity: 0.9;
+        transform: translateY(20px);
+    }
+    
+    #restaurant .r_grid:hover .overlay_detail {
+        opacity: 0.9;
+        transform: translateY(30px);
+    }
